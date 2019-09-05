@@ -52,3 +52,8 @@ There is **no need** to do feature scaling with the normal equation. <br>
 |   Needs many iterations	  |  No need to iterate      |<br>
 |          $O(kn^2)$        |          O(n^3),need to calculate inverse of $X^TX$   |<br>
 | Works well when n is large|	Slow if n is very large  |<br>
+
+
+| Header1 | Header2                          |
+|---------|----------------------------------|
+| item 1  | 1. one<br />2. two<br />3. three |
