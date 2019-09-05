@@ -53,3 +53,5 @@ There is **no need** to do feature scaling with the normal equation. <br>
 |   Needs many iterations	  |  No need to iterate                                   |
 |          $O(kn^2)$        |          $O(n^3)$,need to calculate inverse of $X^TX$   |
 | Works well when n is large|	Slow if n is very large                               |
+
+Note: If $X^TX$ are not invertible, sometimes it may because some of features are closely linear dependent. Another reason maybe there are too many features.
