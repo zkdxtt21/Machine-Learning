@@ -8,13 +8,13 @@ For linear regression cases,<br>
 Hypothesis: $h_\theta(x) = \boldsymbol{\theta}^T\boldsymbol{x} = \theta_0 x_0 + \theta_1 x_1 +\cdots + \theta_n x_n$<br>
 Cost Function: $$J(\theta) = \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)})^2$$
 #### If n = 1,
-Cost Function: $$\begin{aligned}
-J(\theta) &= \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)})^2 \\
-&= \frac{1}{2m} \sum_{i=1}^m (\theta_0  + \theta_1 x^{(i)} - y^{(i)})^2
-\end{aligned}$$
+Cost Function: $$
+J(\theta) = \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)})^2
+= \frac{1}{2m} \sum_{i=1}^m (\theta_0  + \theta_1 x^{(i)} - y^{(i)})^2
+$$
 Repeat{$$
-\theta_0 :&= \theta_0 - \alpha \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)})$$
-$$\theta_1 :&= \theta_1 - \alpha \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)}) x^{(i)}
+\theta_0 := \theta_0 - \alpha \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)})$$
+$$\theta_1 := \theta_1 - \alpha \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)}) x^{(i)}
 $$}
 #### Now suppose $n \geq 1$:
 Repeat{$$
