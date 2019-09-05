@@ -50,10 +50,13 @@ There is **no need** to do feature scaling with the normal equation. <br>
 |---------------------------|-------------------------------------------------------|
 |   Need to choose alpha	  |  No need to choose alpha                              |
 |   Needs many iterations	  |  No need to iterate                                   |
-|          $O(kn^2)$        |          O(n^3),need to calculate inverse of $X^TX$   |
+|          $O(kn^2)$        |          $O(n^3)$,need to calculate inverse of $X^TX$   |
 | Works well when n is large|	Slow if n is very large                               |
 
 
 | Gradient Descent | Normal Equation                          |
 |---------|----------------------------------|
+|   Need to choose alpha  | No need to choose alpha |
+|  Needs many iterations  | No need to iterate    |
+|     $O(kn^2)$   | No need to choose alpha |
 | Need to choose alpha  | No need to choose alpha |
