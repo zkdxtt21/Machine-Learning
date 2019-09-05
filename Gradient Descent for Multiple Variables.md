@@ -43,5 +43,5 @@ To choose $\alpha$, try $\cdots, 0.001, 0.01, 0.1, 1, \cdots$.
 
 3. **Features and polynomial regression**<br>
 We can improve our features and the form of our hypothesis function in a couple different ways.<br>
-We can  **combine**  multiple features into one. For example, we can combine  x_1x1​  and  x_2x2​  into a new feature  x_3x3​  by taking  x_1x1​⋅x_2x2​.<br>
+We can  **combine**  multiple features into one. For example, we can combine  $x_1$  and  $x_2$​  into a new feature $x_3$​ by taking $x_1x_2$.<br>
 We can **change the behavior or curve** of our hypothesis function by making it a quadratic, cubic or square root function (or any other form).
