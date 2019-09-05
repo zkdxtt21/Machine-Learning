@@ -4,12 +4,12 @@ Cost Function : $J(\theta)$ <br>
 Gradient Descent :
 Repeat{$$\theta_j := \theta_j - \alpha\frac{\partial}{\partial \theta_j} J(\theta_1, \cdots, \theta_n) $$}
 
-For linear regression cases,
-Hypothesis: $h_\theta(x) = \boldsymbol{\theta}^T\boldsymbol{x} = \theta_0 x_0 + \theta_1 x_1 +\cdots + \theta_n x_n$
+For linear regression cases,<br>
+Hypothesis: $h_\theta(x) = \boldsymbol{\theta}^T\boldsymbol{x} = \theta_0 x_0 + \theta_1 x_1 +\cdots + \theta_n x_n$<br>
 Cost Function: $$J(\theta) = \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)})^2$$
 #### If n = 1,
 Cost Function: $$\begin{aligned}
-J(\theta) &= \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)})^2 \\
+J(\theta) &= \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)})^2 <br>
 &= \frac{1}{2m} \sum_{i=1}^m (\theta_0  + \theta_1 x^{(i)} - y^{(i)})^2
 \end{aligned}$$
 Repeat{$$
