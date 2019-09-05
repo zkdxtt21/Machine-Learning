@@ -54,6 +54,6 @@ There is **no need** to do feature scaling with the normal equation. <br>
 | Works well when n is large|	Slow if n is very large                               |
 
 
-| Header1 | Header2                          |
+| Gradient Descent | Normal Equation                          |
 |---------|----------------------------------|
-| item 1  | 1. one$1$<br />2. two<br />3. three |
+| Need to choose alpha  | No need to choose alpha |
