@@ -9,14 +9,12 @@ Hypothesis: $h_\theta(x) = \boldsymbol{\theta}^T\boldsymbol{x} = \theta_0 x_0 + 
 Cost Function: $$J(\theta) = \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)})^2$$
 #### If n = 1,
 Cost Function: $$\begin{aligned}
-J(\theta) &= \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)})^2 <br>
+J(\theta) &= \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)})^2 \\
 &= \frac{1}{2m} \sum_{i=1}^m (\theta_0  + \theta_1 x^{(i)} - y^{(i)})^2
 \end{aligned}$$
 Repeat{$$
-\begin{aligned}
-\theta_0 :&= \theta_0 - \alpha \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)})\\
-\theta_1 :&= \theta_1 - \alpha \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)}) x^{(i)}
-\end{aligned}
+\theta_0 :&= \theta_0 - \alpha \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)})$$
+$$\theta_1 :&= \theta_1 - \alpha \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)} ) -y^{(i)}) x^{(i)}
 $$}
 #### Now suppose $n \geq 1$:
 Repeat{$$
