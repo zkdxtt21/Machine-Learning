@@ -46,9 +46,9 @@ We can **change the behavior or curve** of our hypothesis function by making it 
 ### Gradient descent Vs Normal Equation
 Normal Equation: $\theta = (X^TX)^{-1}X^Ty$ <br>
 There is **no need** to do feature scaling with the normal equation. <br>
-|      Gradient Descent	    |      Normal Equation     |
-|---------------------------|--------------------------|
-|   Need to choose alpha	  |  No need to choose alpha |
-|   Needs many iterations	  |  No need to iterate      |
-|          $O(kn^2)$        |          O(n^3),need to calculate inverse of $X^TX$          |
-| Works well when n is large|	Slow if n is very large  |
+|      Gradient Descent	    |      Normal Equation     |<br>
+|---------------------------|--------------------------|<br>
+|   Need to choose alpha	  |  No need to choose alpha |<br>
+|   Needs many iterations	  |  No need to iterate      |<br>
+|          $O(kn^2)$        |          O(n^3),need to calculate inverse of $X^TX$   |<br>
+| Works well when n is large|	Slow if n is very large  |<br>
