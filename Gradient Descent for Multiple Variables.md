@@ -43,3 +43,12 @@ To choose $\alpha$, try $\cdots, 0.001, 0.01, 0.1, 1, \cdots$.
 We can improve our features and the form of our hypothesis function in a couple different ways.<br>
 We can  **combine**  multiple features into one. For example, we can combine  $x_1$  and  $x_2$​  into a new feature $x_3$​ by taking $x_1x_2$.<br>
 We can **change the behavior or curve** of our hypothesis function by making it a quadratic, cubic or square root function (or any other form).
+### Gradient descent Vs Normal Equation
+Normal Equation: $\theta = (X^TX)^{-1}X^Ty$ <br>
+There is **no need** to do feature scaling with the normal equation. <br>
+|      Gradient Descent	    |      Normal Equation     |
+|---------------------------|--------------------------|
+|   Need to choose alpha	  |  No need to choose alpha |
+|   Needs many iterations	  |  No need to iterate      |
+|          $O(kn^2)$        |          O(n^3),need to calculate inverse of $X^TX$          |
+| Works well when n is large|	Slow if n is very large  |
