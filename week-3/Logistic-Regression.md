@@ -14,3 +14,23 @@ If we predict y as 1 when hθ(x)≥0.5.<br>
 The **decision boundary** is the line that separates the area where y = 0 and where y = 1.
 
 Again, the input to the sigmoid function g(z) doesn't need to be linear, and could be a function that describes a circle (e.g. z = -1 + x1^2 + x2^2​) or any shape to fit our data.
+
+### Cost Function<br>
+
+If we use the same form in Linear Regression, then the cost function is non-convex, which is not something we want.
+
+Instead, we define<br>
+<a href="https://www.codecogs.com/eqnedit.php?latex=J(\theta)&space;=&space;\frac{1}{m}\sum_{i=1}^m&space;\frac{1}{2}cost(h_\theta(x^{(i)}),&space;y^{(i)})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J(\theta)&space;=&space;\frac{1}{m}\sum_{i=1}^m&space;\frac{1}{2}cost(h_\theta(x^{(i)}),&space;y^{(i)})" title="J(\theta) = \frac{1}{m}\sum_{i=1}^m \frac{1}{2}cost(h_\theta(x^{(i)}), y^{(i)})" /></a><br>
+<a href="https://www.codecogs.com/eqnedit.php?latex=cost(h_\theta(x),&space;y)&space;=&space;\begin{cases}&space;-\log(h_\theta(x)),~if~&space;y&space;=&space;1;\\&space;-\log(1-h_\theta(x)),&space;~if~y=0.&space;\end{cases}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?cost(h_\theta(x),&space;y)&space;=&space;\begin{cases}&space;-\log(h_\theta(x)),~if~&space;y&space;=&space;1;\\&space;-\log(1-h_\theta(x)),&space;~if~y=0.&space;\end{cases}" title="cost(h_\theta(x), y) = \begin{cases} -\log(h_\theta(x)),~if~ y = 1;\\ -\log(1-h_\theta(x)), ~if~y=0. \end{cases}" /></a>
+
+If y = 1, then cost function looks like
+![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/Q9sX8nnxEeamDApmnD43Fw_1cb67ecfac77b134606532f5caf98ee4_Logistic_regression_cost_function_positive_class.png?expiry=1568073600000&hmac=eFsagYpqa-lGR_ORNA5tQmfNaijQgQKneUheJlYwmzE)
+
+If y = 0, the cost function looks like
+![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/Ut7vvXnxEead-BJkoDOYOw_f719f2858d78dd66d80c5ec0d8e6b3fa_Logistic_regression_cost_function_negative_class.png?expiry=1568073600000&hmac=x49tgPnwfducHkzt3e_TRkm22MbFKuOSAcDY20KhyBI)
+
+If our correct answer 'y' is 0, then the cost function will be 0 if our hypothesis function also outputs 0. If our hypothesis approaches 1, then the cost function will approach infinity.
+
+If our correct answer 'y' is 1, then the cost function will be 0 if our hypothesis function outputs 1. If our hypothesis approaches 0, then the cost function will approach infinity.
+
+Note that writing the cost function in this way guarantees that J(θ) is convex for logistic regression.
