@@ -72,7 +72,7 @@ Now we will approach the classification of data when we have more than two categ
 
 Since y = {0,1...n}, we divide our problem into n+1 (+1 because the index starts at 0) binary classification problems; in each one, we predict the probability that 'y' is a member of one of our classes.
 
-**Method:**
-Train a logistic regression classifier  <a href="https://www.codecogs.com/eqnedit.php?latex=h_\theta^{(i)}(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_\theta^{(i)}(x)" title="h_\theta(x^{(i)})" /></a>  for each class￼ to predict the probability that ￼ ￼y = i￼ ￼.
+**Method:**<br>
+1. Train a logistic regression classifier  <a href="https://www.codecogs.com/eqnedit.php?latex=h_\theta^{(i)}(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_\theta^{(i)}(x)" title="h_\theta(x^{(i)})" /></a>  for each class￼ to predict the probability that ￼ ￼y = i￼ ￼.
 
-To make a prediction on a new x, pick the class ￼that maximizes <a href="https://www.codecogs.com/eqnedit.php?latex=h_\theta^{(i)}(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_\theta^{(i)}(x)" title="h_\theta(x^{(i)})" /></a>.
+2. To make a prediction on a new x, pick the class ￼that maximizes <a href="https://www.codecogs.com/eqnedit.php?latex=h_\theta^{(i)}(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h_\theta^{(i)}(x)" title="h_\theta(x^{(i)})" /></a>.
