@@ -44,3 +44,23 @@ Repeat{<br>
 }<br>
 Vectorization: <br>
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;=&space;\theta&space;-&space;\alpha&space;\frac{1}{m}&space;\sum_{i=1}^m(h_\theta(x^{(i)})-&space;y^{(i)})&space;\cdot&space;x^{(i)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;=&space;\theta&space;-&space;\alpha&space;\frac{1}{m}&space;\sum_{i=1}^m(h_\theta(x^{(i)})-&space;y^{(i)})&space;\cdot&space;x^{(i)}" title="\theta = \theta - \alpha \frac{1}{m} \sum_{i=1}^m(h_\theta(x^{(i)})- y^{(i)}) \cdot x^{(i)}" /></a>
+
+###  Advanced Optimization<br>
+"Conjugate gradient", "BFGS", and "L-BFGS" are more sophisticated, faster ways to optimize θ that can be used instead of gradient descent. We suggest that you should not write these more sophisticated algorithms yourself (unless you are an expert in numerical computing) but use the libraries instead, as they're already tested and highly optimized.<br>
+We can write a single function that returns both of the cost function and the gradient of the cost function:<br>
+
+``` matlab
+function [jVal, gradient] = costFunction(theta)
+  jVal = [...code to compute J(theta)...];
+  gradient = [...code to compute derivative of J(theta)...];
+end
+```
+
+Then we can use octave's "fminunc()" optimization algorithm along with the "optimset()" function that creates an object containing the options we want to send to "fminunc()".
+
+```matlab
+options = optimset('GradObj', 'on', 'MaxIter', 100);
+initialTheta = zeros(2,1);
+[optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options);
+```
+We give to the function "fminunc()" our cost function, our initial vector of theta values, and the "options" object that we created beforehand.
