@@ -35,8 +35,7 @@ If our correct answer 'y' is 1, then the cost function will be 0 if our hypothes
 
 Note that writing the cost function in this way guarantees that J(θ) is convex for logistic regression.
 
-
-###Gradient Descent
+### Gradient Descent <br>
 The **Total Cost Function** is<br>
 <a href="https://www.codecogs.com/eqnedit.php?latex=J(\theta)&space;=&space;-\frac{1}{m}\sum_{i=1}^m&space;y^{(i)}log(h_\theta(x^{(i)}))&space;&plus;&space;(1-y^{(i)})log(1-h_\theta(x^{(i)}))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J(\theta)&space;=&space;-\frac{1}{m}\sum_{i=1}^m&space;y^{(i)}log(h_\theta(x^{(i)}))&space;&plus;&space;(1-y^{(i)})log(1-h_\theta(x^{(i)}))" title="J(\theta) = -\frac{1}{m}\sum_{i=1}^m y^{(i)}log(h_\theta(x^{(i)})) + (1-y^{(i)})log(1-h_\theta(x^{(i)}))" /></a><br>
 We want to minimize J(θ).<br>
