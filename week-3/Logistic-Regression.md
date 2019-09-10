@@ -34,3 +34,14 @@ If our correct answer 'y' is 0, then the cost function will be 0 if our hypothes
 If our correct answer 'y' is 1, then the cost function will be 0 if our hypothesis function outputs 1. If our hypothesis approaches 0, then the cost function will approach infinity.
 
 Note that writing the cost function in this way guarantees that J(θ) is convex for logistic regression.
+
+
+###Gradient Descent
+The **Total Cost Function** is<br>
+<a href="https://www.codecogs.com/eqnedit.php?latex=J(\theta)&space;=&space;-\frac{1}{m}\sum_{i=1}^m&space;y^{(i)}log(h_\theta(x^{(i)}))&space;&plus;&space;(1-y^{(i)})log(1-h_\theta(x^{(i)}))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J(\theta)&space;=&space;-\frac{1}{m}\sum_{i=1}^m&space;y^{(i)}log(h_\theta(x^{(i)}))&space;&plus;&space;(1-y^{(i)})log(1-h_\theta(x^{(i)}))" title="J(\theta) = -\frac{1}{m}\sum_{i=1}^m y^{(i)}log(h_\theta(x^{(i)})) + (1-y^{(i)})log(1-h_\theta(x^{(i)}))" /></a><br>
+We want to minimize J(θ).<br>
+Repeat{<br>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta_j&space;=&space;\theta_j&space;-&space;\alpha&space;\frac{1}{m}\frac{\partial}{\partial\theta_j}J(\theta)&space;=&space;\theta_j&space;-&space;\alpha&space;\frac{1}{m}&space;\sum_{i=1}^m(h_\theta(x^{(i)})-&space;y^{(i)})x_j^{(i)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta_j&space;=&space;\theta_j&space;-&space;\alpha&space;\frac{1}{m}\frac{\partial}{\partial\theta_j}J(\theta)&space;=&space;\theta_j&space;-&space;\alpha&space;\frac{1}{m}&space;\sum_{i=1}^m(h_\theta(x^{(i)})-&space;y^{(i)})x_j^{(i)}" title="\theta_j = \theta_j - \alpha \frac{1}{m}\frac{\partial}{\partial\theta_j}J(\theta) = \theta_j - \alpha \frac{1}{m} \sum_{i=1}^m(h_\theta(x^{(i)})- y^{(i)})x_j^{(i)}" /></a>
+}<br>
+Vectorization: <br>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;=&space;\theta&space;-&space;\alpha&space;\frac{1}{m}&space;\sum_{i=1}^m(h_\theta(x^{(i)})-&space;y^{(i)})&space;\cdot&space;x^{(i)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;=&space;\theta&space;-&space;\alpha&space;\frac{1}{m}&space;\sum_{i=1}^m(h_\theta(x^{(i)})-&space;y^{(i)})&space;\cdot&space;x^{(i)}" title="\theta = \theta - \alpha \frac{1}{m} \sum_{i=1}^m(h_\theta(x^{(i)})- y^{(i)}) \cdot x^{(i)}" /></a>
